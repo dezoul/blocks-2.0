@@ -1,0 +1,86 @@
+---
+header-bar-link:
+heading: Lightbox Masonry Gallery with captions
+html_code_block: |
+
+  <section class="padded centered">
+
+  <h2> What a cool gallery </h2>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+    <div class="popup-gallery masonry">
+
+      <a class="item" href="/images/mountain.jpg" heading="this is where you write the caption">
+        <img src='/images/mountain.jpg'>
+      </a>
+
+      <a class="item" href="/images/adventure.jpg" heading="this is where you write the caption">
+        <img src='/images/adventure.jpg'>
+      </a>
+      <a class="item" href="/images/pencils.jpg" heading="this is where you write the caption">
+        <img src='/images/pencils.jpg'>
+      </a>
+      <a class="item" href="/images/cocktail.jpg" heading="this is where you write the caption">
+        <img src='/images/cocktail.jpg'>
+      </a>
+      <a class="item" href="/images/person.png" heading="this is where you write the caption">
+        <img src='/images/person.png'>
+      </a>
+      <a class="item" href="/images/laptop.jpg" heading="this is where you write the caption">
+        <img src='/images/laptop.jpg'>
+      </a>
+
+      <a class="item" href="/images/lego.jpg" heading="this is where you write the caption">
+        <img src='/images/lego.jpg'>
+      </a>
+
+
+    </div>
+
+  </section>
+css_code_block: |
+
+  .masonry { /* Masonry container */
+    column-count: 3;
+    column-gap: 1rem;
+  }
+
+  .masonry .item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  @media(max-width:767px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media(max-width:567px) {
+    .masonry {
+      column-count: 1;
+    }
+  }
+js_code_block: |
+  $(document).ready(function() {
+    $('.popup-gallery').magnificPopup({
+  		delegate: 'a',
+  		type: 'image',
+  		tLoading: 'Loading image #%curr%...',
+  		mainClass: 'mfp-img-mobile',
+  		gallery: {
+  			enabled: true,
+  			navigateByImgClick: true,
+  			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  		},
+  		image: {
+  			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+  			titleSrc: function(item) {
+  				return item.el.attr('title');
+  			}
+  		}
+  	});
+  });
+---

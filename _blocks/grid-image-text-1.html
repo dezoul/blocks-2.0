@@ -1,0 +1,56 @@
+---
+header-bar-link:
+heading: Image & Text Grid 1
+html_code_block: |
+
+  <section class="light-bg">
+    <div class="grid md:grid-cols-2">
+      <div class="bg-image bg-yoga"></div>
+      <div class="self-center p-5p">
+        <h3> This this a heading </h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <a class="subtle-button" href="#"> Read More > </a>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 ">
+      <div class="bg-image bg-wellness md:order-2"></div>
+      <div class="p-5p">
+        <h3> This this a heading </h3>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <a class="subtle-button" href="#"> Explore > </a>
+      </div>
+    </div>
+  </section>
+css_code_block: |
+
+  .grid-flip:nth-child(2n) .bg-image {
+    order: 2
+  }
+
+  .subtle-button { /* this is the arrow button */
+    color: rgb(120,120,125);
+    padding: 0.3rem;
+    padding-left: 0;
+    font-weight: bold;
+  }
+  .subtle-button:hover {
+    color: rgb(60, 60, 60);
+    border-color: rgb(60, 60, 60);
+  }
+
+  .bg-image {
+    background-color: rgb(235,235,235);
+    background-size: cover;
+    background-position: center;
+    min-height: 12rem;
+  }
+
+  .bg-yoga {
+    background-image:url('/images/wellness-3.jpg');
+  }
+
+  .bg-wellness {
+    background-image:url('/images/wellness-4.jpg');
+  }
+
+---

@@ -1,0 +1,25 @@
+---
+layout: default
+heading: banner Fixed
+html_code_block: |
+
+  <section class="banner flex items-center justify-center fixed-bg">
+    <div class="md:w-[50%] bg-slate-200 p-8 text-center">
+      <h2 class="big-bold"> This this a heading </h2>
+      <h3 class="not-bold"> This is a sub-heading </h3>
+    </div>
+  </section>
+css_code_block: |
+
+  .banner,
+  .banner-with-header {
+    background-image: url('/images/adventure.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+  }
+  .fixed-bg {
+    background-attachment: fixed;
+  }
+
+---
