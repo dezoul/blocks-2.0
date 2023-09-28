@@ -1,4 +1,7 @@
 collections:
   blocks:
     output: true
+  blocks-multiform:
+    output: true
+
   js:

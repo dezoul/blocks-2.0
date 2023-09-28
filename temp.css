@@ -1,0 +1,5 @@
+ @media (max-width: 50vh) {
+    .min-h-\[70vh\] {
+        min-height: 50vw;
+    }
+ }
