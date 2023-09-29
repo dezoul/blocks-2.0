@@ -1,0 +1,38 @@
+
+<!-- <style> {% include universal-styles.css %} </style> -->
+<section>
+
+    <div id="tailwind-config">
+        <div class="grid-spaceBetween mb-4">
+            <h2 class="col">Tailwind config</h2>
+            <div class="col right">
+                <a class="demo button" onclick="$('#tailwind-config .demo-info').slideToggle()">Show Tailwind Config</a>
+            </div>
+        </div>
+    
+        <div class="demo-info padded">
+            <pre>
+                <code class="language-js">
+                {% include tailwind.config.js %}
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div id="universal-styles">
+        <div class="grid-spaceBetween">
+            <h2 class="col">Universal Styles</h2>
+            <div class="col right">
+            <a class="demo button" onclick="$('#universal-styles .demo-info').slideToggle()">Show Universal Styles</a>
+            </div>
+        </div>
+
+        <div class="demo-info padded">
+            <pre>
+                <code class="language-css">
+                {% include universal-styles.css %}
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
+  

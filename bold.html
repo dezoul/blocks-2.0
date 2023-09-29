@@ -12,34 +12,15 @@ heading: bold
     {% if block.html_code_block_bold %}
 
         {% if block.header-bar-link %}
-          <a href="/bold/#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a> 
+          <a href="#{{forloop.index}}-section" class="caps">{{block.header-bar-link}}</a> 
         {% endif %}
       {% endif %}
     {% endfor %}
   </header>
 </div>
 
-
-
-<!-- <style> {% include universal-styles.css %} </style> -->
-
-<section id="tailwind-config">
-  <div class="heading-block grid-spaceBetween">
-    <h2 class="col">Tailwind config</h2>
-    <div class="col right">
-      <a class="demo button" onclick="$('#tailwind-config .demo-info').slideToggle()">Show Tailwind Config</a>
-    </div>
-  </div>
-
-  <div class="demo-info padded">
-    <pre>
-  <code class="language-js">
-  {% include tailwind.config.js %}
-  </code>
-  </pre>
-  </div>
-</section>
-
+  {% include init-setup.html %}
+  
 
 
 {% for block in site.blocks-multiform %}
