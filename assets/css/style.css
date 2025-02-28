@@ -688,13 +688,13 @@ video {
   border-top-left-radius: 30vw;
   border-top-right-radius: 30vw;
 }
-.rounded-t-full {
-  border-top-left-radius: 9999px;
-  border-top-right-radius: 9999px;
-}
 .rounded-t-\[50vw\] {
   border-top-left-radius: 50vw;
   border-top-right-radius: 50vw;
+}
+.rounded-t-full {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 .border {
   border-width: 1px;
